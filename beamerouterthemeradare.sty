@@ -1,0 +1,25 @@
+\mode<presentation>
+
+%Frame title
+\defbeamertemplate*{frametitle}{radare}[1][]
+{
+	\vskip0.5cm%
+	\begin{beamercolorbox}[wd=\paperwidth,ht=0.5cm]{frametitle}
+	\begin{tikzpicture}
+		%\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
+		%\fill[shading=axis,bottom color=orange, top color=white,shading angle=90] (0,0) rectangle(2.95,1.0);
+		\fill[orange] (0,0) rectangle(2.95,1.0);
+		\fill[black!60!white!20] (2.95,0) rectangle(3.05,1.0);
+		\fill[blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.0);
+		\ifx\insertframesubtitle\@empty%
+			{\node[anchor=west,white,font=\large] at (3.2,0.41){\insertframetitle};}
+		\else%
+			{\node[anchor=west,white,font=\large] at (3.2,0.51){\insertframetitle};%
+			\node[anchor=west,white,font=\small] at (3.2,0.41){\insertframesubtitle};}%
+		\fi
+	\end{tikzpicture}
+	\end{beamercolorbox}
+}
+
+\mode<all>
+
