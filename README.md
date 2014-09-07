@@ -5,3 +5,5 @@ and enable in your presentation by
 \usetheme{radare}
 ```
 
+Require PGF/TikZ package installed
+
